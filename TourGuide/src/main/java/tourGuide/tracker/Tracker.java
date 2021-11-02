@@ -12,7 +12,7 @@ import org.slf4j.LoggerFactory;
 import tourGuide.service.TourGuideService;
 import tourGuide.user.User;
 
-public class Tracker extends Thread {
+public class Tracker implements Runnable {
 	private Logger logger = LoggerFactory.getLogger(Tracker.class);
 	private static final long trackingPollingInterval = TimeUnit.MINUTES.toSeconds(5);
 	private final ExecutorService executorService = Executors.newSingleThreadExecutor();
@@ -36,19 +36,25 @@ public class Tracker extends Thread {
 	@Override
 	public void run() {
 		StopWatch stopWatch = new StopWatch();
+		List<User> users = tourGuideService.getAllUsers();
+		logger.debug("Begin Tracker. Tracking " + users.size() + " users.");
+		stopWatch.start();
 		while(true) {
 			if(Thread.currentThread().isInterrupted() || stop) {
 				logger.debug("Tracker stopping");
 				break;
 			}
-			
-			List<User> users = tourGuideService.getAllUsers();
-			logger.debug("Begin Tracker. Tracking " + users.size() + " users.");
-			stopWatch.start();
-			users.forEach(u -> tourGuideService.trackUserLocation(u));
+
+			try{
+				tourGuideService.trackListUserLocation(users);
+			} catch (InterruptedException e){
+				e.printStackTrace();
+			}
+			//users.forEach(u -> tourGuideService.trackUserLocation(u));
 			stopWatch.stop();
 			logger.debug("Tracker Time Elapsed: " + TimeUnit.MILLISECONDS.toSeconds(stopWatch.getTime()) + " seconds."); 
 			stopWatch.reset();
+
 			try {
 				logger.debug("Tracker sleeping");
 				TimeUnit.SECONDS.sleep(trackingPollingInterval);

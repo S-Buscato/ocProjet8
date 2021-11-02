@@ -9,6 +9,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Random;
 import java.util.UUID;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
@@ -35,7 +37,9 @@ public class TourGuideService {
 	private final TripPricer tripPricer = new TripPricer();
 	public final Tracker tracker;
 	boolean testMode = true;
-	
+
+	ExecutorService executorService = Executors.newFixedThreadPool(80);
+
 	public TourGuideService(GpsUtil gpsUtil, RewardsService rewardsService) {
 		this.gpsUtil = gpsUtil;
 		this.rewardsService = rewardsService;
@@ -83,11 +87,21 @@ public class TourGuideService {
 		return providers;
 	}
 	
-	public VisitedLocation trackUserLocation(User user) {
+	public synchronized VisitedLocation trackUserLocation(User user) {
 		VisitedLocation visitedLocation = gpsUtil.getUserLocation(user.getUserId());
 		user.addToVisitedLocations(visitedLocation);
 		rewardsService.calculateRewards(user);
+
 		return visitedLocation;
+	}
+
+	public void trackListUserLocation(List<User> userList) throws InterruptedException {
+		for (User user: userList) {
+			Runnable runnable = () -> {
+				trackUserLocation(user);
+			};
+			executorService.execute(runnable);
+		}
 	}
 
 	public List<Attraction> getNearByAttractions(VisitedLocation visitedLocation) {

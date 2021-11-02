@@ -10,12 +10,15 @@ import rewardCentral.RewardCentral;
 import tourGuide.helper.InternalTestHelper;
 import tourGuide.service.RewardsService;
 import tourGuide.service.TourGuideService;
+import tourGuide.tracker.Tracker;
 import tourGuide.user.User;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
 import static org.junit.Assert.assertTrue;
@@ -52,17 +55,43 @@ public class TestPerformance {
 		GpsUtil gpsUtil = new GpsUtil();
 		RewardsService rewardsService = new RewardsService(gpsUtil, new RewardCentral());
 		// Users should be incremented up to 100,000, and test finishes within 15 minutes
-		InternalTestHelper.setInternalUserNumber(100);
+		InternalTestHelper.setInternalUserNumber(10);
 		TourGuideService tourGuideService = new TourGuideService(gpsUtil, rewardsService);
 
 		List<User> allUsers = new ArrayList<>();
 		allUsers = tourGuideService.getAllUsers();
-		
+
 	    StopWatch stopWatch = new StopWatch();
 		stopWatch.start();
+
+		Date dateDebut = new Date();
+
 		for(User user : allUsers) {
-			tourGuideService.trackUserLocation(user);
+
+			Tracker t = new Tracker(tourGuideService);
+			t.run();
+
+				/*Runnable runnable = () -> {
+					VisitedLocation visitedLocation = tourGuideService.trackUserLocation(user);
+					user.addToVisitedLocations(visitedLocation);
+				};
+				executorService.execute(runnable);*/
 		}
+/*		try{
+			ExecutorService executorService = Executors.newFixedThreadPool(80);
+
+
+
+
+			executorService.shutdown();
+			executorService.awaitTermination(15, TimeUnit.MINUTES);
+		}catch (Exception e){
+
+		}*/
+		Date dateFin = new Date();
+
+		System.out.println("durée exé = " + (dateFin.getTime() - dateDebut.getTime()) + " sec");
+
 		stopWatch.stop();
 		tourGuideService.tracker.stopTracking();
 
