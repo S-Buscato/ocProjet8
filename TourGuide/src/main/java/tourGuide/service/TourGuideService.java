@@ -123,7 +123,8 @@ public class TourGuideService {
 
 				Runnable runnableTask = () -> {
 					trackUserLocation(user);
-					i.getAndIncrement();//allUsersEND.add(user);
+					i.getAndIncrement();
+					allUsersEND.add(user);
 				};
 				executorService.submit(runnableTask);
 			}
