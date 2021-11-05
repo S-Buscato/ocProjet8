@@ -36,25 +36,19 @@ public class Tracker implements Runnable {
 	@Override
 	public void run() {
 		StopWatch stopWatch = new StopWatch();
-		List<User> users = tourGuideService.getAllUsers();
-		logger.debug("Begin Tracker. Tracking " + users.size() + " users.");
-		stopWatch.start();
 		while(true) {
 			if(Thread.currentThread().isInterrupted() || stop) {
 				logger.debug("Tracker stopping");
 				break;
 			}
 
-			try{
-				tourGuideService.trackListUserLocation(users);
-			} catch (InterruptedException e){
-				e.printStackTrace();
-			}
-			//users.forEach(u -> tourGuideService.trackUserLocation(u));
+			List<User> users = tourGuideService.getAllUsers();
+			logger.debug("Begin Tracker. Tracking " + users.size() + " users.");
+			stopWatch.start();
+			users.forEach(u -> tourGuideService.trackUserLocation(u));
 			stopWatch.stop();
-			logger.debug("Tracker Time Elapsed: " + TimeUnit.MILLISECONDS.toSeconds(stopWatch.getTime()) + " seconds."); 
+			logger.debug("Tracker Time Elapsed: " + TimeUnit.MILLISECONDS.toSeconds(stopWatch.getTime()) + " seconds.");
 			stopWatch.reset();
-
 			try {
 				logger.debug("Tracker sleeping");
 				TimeUnit.SECONDS.sleep(trackingPollingInterval);
@@ -62,6 +56,6 @@ public class Tracker implements Runnable {
 				break;
 			}
 		}
-		
+
 	}
 }
