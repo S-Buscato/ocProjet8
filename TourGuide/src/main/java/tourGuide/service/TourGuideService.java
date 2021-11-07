@@ -9,10 +9,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Random;
 import java.util.UUID;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
@@ -90,8 +86,7 @@ public class TourGuideService {
 	public VisitedLocation trackUserLocation(User user) {
 		VisitedLocation visitedLocation = gpsUtil.getUserLocation(user.getUserId());
 		user.addToVisitedLocations(visitedLocation);
-		//rewardsService.calculateRewards(user);
-		rewardsService.executorService(user);
+		rewardsService.calculateRewards(user);
 		return visitedLocation;
 	}
 
@@ -113,29 +108,6 @@ public class TourGuideService {
 		      } 
 		    }); 
 	}
-
-	public void executorService(List<User> users){
-		AtomicInteger i = new AtomicInteger();
-		List<User> allUsersEND = new ArrayList<>();
-		ExecutorService executorService = Executors.newFixedThreadPool(100000);
-		try {
-			for (User user: users) {
-
-				Runnable runnableTask = () -> {
-					trackUserLocation(user);
-					i.getAndIncrement();//allUsersEND.add(user);
-				};
-				executorService.submit(runnableTask);
-			}
-			executorService.shutdown();
-			executorService.awaitTermination(6000, TimeUnit.MILLISECONDS);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		System.out.println("i " + i);
-		System.out.println("allUsersEND " + allUsersEND.size());
-
-	};
 	
 	/**********************************************************************************
 	 * 

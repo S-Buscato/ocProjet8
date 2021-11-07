@@ -1,11 +1,6 @@
 package tourGuide.service;
 
-import java.util.Date;
 import java.util.List;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.atomic.AtomicInteger;
 
 import org.springframework.stereotype.Service;
 
@@ -44,7 +39,7 @@ public class RewardsService {
 	public void calculateRewards(User user) {
 		List<VisitedLocation> userLocations = user.getVisitedLocations();
 		List<Attraction> attractions = gpsUtil.getAttractions();
-
+		
 		for(VisitedLocation visitedLocation : userLocations) {
 			for(Attraction attraction : attractions) {
 				if(user.getUserRewards().stream().filter(r -> r.attraction.attractionName.equals(attraction.attractionName)).count() == 0) {
@@ -60,11 +55,11 @@ public class RewardsService {
 		return getDistance(attraction, location) > attractionProximityRange ? false : true;
 	}
 	
-	public boolean nearAttraction(VisitedLocation visitedLocation, Attraction attraction) {
+	private boolean nearAttraction(VisitedLocation visitedLocation, Attraction attraction) {
 		return getDistance(attraction, visitedLocation.location) > proximityBuffer ? false : true;
 	}
 	
-	public int getRewardPoints(Attraction attraction, User user) {
+	private int getRewardPoints(Attraction attraction, User user) {
 		return rewardsCentral.getAttractionRewardPoints(attraction.attractionId, user.getUserId());
 	}
 	
@@ -82,19 +77,4 @@ public class RewardsService {
         return statuteMiles;
 	}
 
-	//todo implement an executor service
-
-	public void executorService(User user){
-		ExecutorService executorService = Executors.newFixedThreadPool(5000);
-		try {
-			Runnable runnableTask = () -> {
-				calculateRewards(user);
-			};
-			executorService.submit(runnableTask);
-			executorService.shutdown();
-			executorService.awaitTermination(9, TimeUnit.SECONDS);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-	};
 }
