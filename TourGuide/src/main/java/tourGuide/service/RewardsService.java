@@ -1,5 +1,6 @@
 package tourGuide.service;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
@@ -82,18 +83,19 @@ public class RewardsService {
         return statuteMiles;
 	}
 
-	//todo implement an executor service
+	public void executorService(List<User> users){
+		ExecutorService executorService = Executors.newFixedThreadPool(100);
 
-	public void executorService(User user){
-		ExecutorService executorService = Executors.newFixedThreadPool(5000);
-		try {
+		for (User user: users) {
 			Runnable runnableTask = () -> {
 				calculateRewards(user);
 			};
 			executorService.submit(runnableTask);
-			executorService.shutdown();
-			executorService.awaitTermination(9, TimeUnit.SECONDS);
-		} catch (InterruptedException e) {
+		}
+		executorService.shutdown();
+		try {
+			executorService.awaitTermination(15, TimeUnit.MINUTES);
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	};
