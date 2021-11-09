@@ -90,8 +90,7 @@ public class TourGuideService {
 	public VisitedLocation trackUserLocation(User user) {
 		VisitedLocation visitedLocation = gpsUtil.getUserLocation(user.getUserId());
 		user.addToVisitedLocations(visitedLocation);
-		//rewardsService.calculateRewards(user);
-		rewardsService.executorService(user);
+		rewardsService.calculateRewards(user);
 		return visitedLocation;
 	}
 
@@ -115,27 +114,20 @@ public class TourGuideService {
 	}
 
 	public void executorService(List<User> users){
-		AtomicInteger i = new AtomicInteger();
-		List<User> allUsersEND = new ArrayList<>();
-		ExecutorService executorService = Executors.newFixedThreadPool(100000);
-		try {
-			for (User user: users) {
+		ExecutorService executorService = Executors.newFixedThreadPool(100);
 
-				Runnable runnableTask = () -> {
-					trackUserLocation(user);
-					i.getAndIncrement();
-					allUsersEND.add(user);
-				};
-				executorService.submit(runnableTask);
-			}
-			executorService.shutdown();
-			executorService.awaitTermination(6000, TimeUnit.MILLISECONDS);
-		} catch (InterruptedException e) {
+		for (User user: users) {
+			Runnable runnableTask = () -> {
+				trackUserLocation(user);
+			};
+			executorService.submit(runnableTask);
+		}
+		executorService.shutdown();
+		try {
+			executorService.awaitTermination(15, TimeUnit.MINUTES);
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		System.out.println("i " + i);
-		System.out.println("allUsersEND " + allUsersEND.size());
-
 	};
 	
 	/**********************************************************************************
