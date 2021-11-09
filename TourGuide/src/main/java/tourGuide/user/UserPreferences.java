@@ -3,9 +3,14 @@ package tourGuide.user;
 import javax.money.CurrencyUnit;
 import javax.money.Monetary;
 
+import lombok.Data;
+import lombok.Generated;
+import lombok.NoArgsConstructor;
 import org.javamoney.moneta.Money;
 
-
+@Data
+@Generated
+@NoArgsConstructor
 public class UserPreferences {
 	
 	private int attractionProximity = Integer.MAX_VALUE;
@@ -17,7 +22,7 @@ public class UserPreferences {
 	private int numberOfAdults = 1;
 	private int numberOfChildren = 0;
 	
-	public UserPreferences() {
+	/*public UserPreferences() {
 	}
 	
 	public void setAttractionProximity(int attractionProximity) {
@@ -75,5 +80,5 @@ public class UserPreferences {
 	public void setNumberOfChildren(int numberOfChildren) {
 		this.numberOfChildren = numberOfChildren;
 	}
-
+*/
 }

@@ -27,6 +27,7 @@ import gpsUtil.location.VisitedLocation;
 import tourGuide.helper.InternalTestHelper;
 import tourGuide.tracker.Tracker;
 import tourGuide.user.User;
+import tourGuide.user.UserLocation;
 import tourGuide.user.UserReward;
 import tripPricer.Provider;
 import tripPricer.TripPricer;
@@ -112,6 +113,17 @@ public class TourGuideService {
 		        tracker.stopTracking();
 		      } 
 		    }); 
+	}
+
+	public List<UserLocation> getAllUsersLocation() {
+		List<User> userList = getAllUsers();
+		List<UserLocation> userLocationList = new ArrayList<>();
+
+		userList.forEach(u -> {
+			userLocationList.add(new UserLocation(u.getLastVisitedLocation().location, u.getUserId().toString()));
+		});
+
+		return userLocationList;
 	}
 
 	public void executorService(List<User> users){

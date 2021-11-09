@@ -6,8 +6,12 @@ import java.util.List;
 import java.util.UUID;
 
 import gpsUtil.location.VisitedLocation;
+import lombok.Data;
+import lombok.Generated;
 import tripPricer.Provider;
 
+@Data
+@Generated
 public class User {
 	private final UUID userId;
 	private final String userName;
@@ -18,6 +22,7 @@ public class User {
 	private List<UserReward> userRewards = new ArrayList<>();
 	private UserPreferences userPreferences = new UserPreferences();
 	private List<Provider> tripDeals = new ArrayList<>();
+
 	public User(UUID userId, String userName, String phoneNumber, String emailAddress) {
 		this.userId = userId;
 		this.userName = userName;
