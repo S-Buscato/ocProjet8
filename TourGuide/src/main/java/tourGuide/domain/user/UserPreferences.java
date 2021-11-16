@@ -1,16 +1,18 @@
-package tourGuide.user;
+package tourGuide.domain.user;
 
-import javax.money.CurrencyUnit;
-import javax.money.Monetary;
-
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Generated;
 import lombok.NoArgsConstructor;
 import org.javamoney.moneta.Money;
 
+import javax.money.CurrencyUnit;
+import javax.money.Monetary;
+
 @Data
 @Generated
 @NoArgsConstructor
+@AllArgsConstructor
 public class UserPreferences {
 	
 	private int attractionProximity = Integer.MAX_VALUE;

@@ -1,14 +1,14 @@
-package tourGuide.user;
-
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.UUID;
+package tourGuide.domain.user;
 
 import gpsUtil.location.VisitedLocation;
 import lombok.Data;
 import lombok.Generated;
 import tripPricer.Provider;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.UUID;
 
 @Data
 @Generated
