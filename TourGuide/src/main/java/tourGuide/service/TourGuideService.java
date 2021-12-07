@@ -1,35 +1,17 @@
 package tourGuide.service;
 
 
-import java.time.LocalDateTime;
-import java.time.ZoneOffset;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Random;
-import java.util.UUID;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.TimeUnit;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Service;
-
 import gpsUtil.GpsUtil;
-import gpsUtil.location.Location;
 import gpsUtil.location.Attraction;
+import gpsUtil.location.Location;
 import gpsUtil.location.VisitedLocation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import tourGuide.domain.location.AttractionLocation;
-import tourGuide.domain.user.*;
 import tourGuide.domain.user.User;
+import tourGuide.domain.user.UserLocation;
+import tourGuide.domain.user.UserReward;
 import tourGuide.helper.InternalTestHelper;
 import tourGuide.tracker.Tracker;
 import tripPricer.Provider;
@@ -127,7 +109,6 @@ public class TourGuideService {
 		/*Comparator<AttractionLocation> attractionLocationComparator = Comparator.comparing(AttractionLocation::getDistance);
 		Collections.sort(attractionLocations, attractionLocationComparator);*/
 
-		//peut on faire mieux/plus direct ?
 		//get the 5 first attractions
 		List<AttractionLocation> fiveAttraction = attractionLocations.stream().limit(5).collect(Collectors.toList());
 		for(AttractionLocation attractionLocation1 : fiveAttraction){
