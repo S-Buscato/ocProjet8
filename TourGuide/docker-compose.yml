@@ -1,0 +1,24 @@
+services:
+  tourguide:
+    image: tourguide:v1.0.0
+    ports:
+      - 8080:8080
+    depends_on:
+       - gpsutil
+       - rewardscentral
+       - trippricer
+
+  gpsutil:
+    image: gps-util:v1.0.0
+    ports:
+      - 8081:8081
+
+  rewardscentral:
+    image: reward-central:v1.0.0
+    ports:
+      - 8082:8082
+
+  trippricer:
+    image: trip-pricer:v1.0.0
+    ports:
+      - 8083:8083
