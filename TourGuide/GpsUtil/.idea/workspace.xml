@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="GpsUtil:jar" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ef02b06d-992f-4a38-931a-dfe6f92065a6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../.idea/TourGuide.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/modules/TourGuide.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/modules/TourGuide.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/modules/TourGuide.test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.7/executionHistory/executionHistory.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.7/executionHistory/executionHistory.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.7/fileChanges/last-build.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.7/fileHashes/fileHashes.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.7/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.7/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.7/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.7/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.7/javaCompile/javaCompile.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.7/javaCompile/taskHistory.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/configuration-cache/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/vcs-1/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/GpsUtil_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/gpsUtil/Application.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/gpsUtil/controller/GpsController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/gpsUtil/location/Attraction.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/gpsUtil/location/Location.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/gpsUtil/location/VisitedLocation.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/gpsUtil/service/GpsUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/libs/GpsUtil.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/libs/gpsUtil-1.0.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/gpsUtil.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/tmp/bootJar/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/tmp/compileJava/source-classes-mapping.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/tmp/jar/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/GpsUtil_jar/GpsUtil.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/resources/gpsUtil.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/gpsUtil/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/gpsUtil/controller/GpsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/gpsUtil/location/Attraction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/gpsUtil/location/Location.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/gpsUtil/location/VisitedLocation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/gpsUtil/service/GpsUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/gpsUtil.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TripPricer/.gradle/6.7/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TripPricer/.gradle/6.7/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TripPricer/.gradle/6.7/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TripPricer/.gradle/6.7/javaCompile/javaCompile.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TripPricer/.gradle/6.7/javaCompile/taskHistory.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TripPricer/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TripPricer/.idea/modules/tripPricer.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TripPricer/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TripPricer/build/classes/java/main/TripPricer/Application.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TripPricer/build/libs/tripPricer-1.0.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TripPricer/build/resources/main/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TripPricer/build/tmp/bootJar/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TripPricer/build/tmp/compileJava/source-classes-mapping.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TripPricer/libs/TripPricer.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TripPricer/src/main/java/tripPricer/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TripPricer/src/main/java/tripPricer/Provider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TripPricer/src/main/java/tripPricer/TripPricer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TripPricer/src/main/java/tripPricer/TripPricerTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TripPricer/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../libs/OLD_gpsUtil.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rewardCentral/.gradle/6.7/executionHistory/executionHistory.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rewardCentral/.gradle/6.7/executionHistory/executionHistory.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rewardCentral/.gradle/6.7/fileChanges/last-build.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rewardCentral/.gradle/6.7/fileHashes/fileHashes.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rewardCentral/.gradle/6.7/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rewardCentral/.gradle/6.7/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rewardCentral/.gradle/6.7/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rewardCentral/.gradle/6.7/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rewardCentral/.gradle/6.7/javaCompile/javaCompile.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rewardCentral/.gradle/6.7/javaCompile/taskHistory.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rewardCentral/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rewardCentral/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rewardCentral/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rewardCentral/.gradle/configuration-cache/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rewardCentral/.gradle/vcs-1/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rewardCentral/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rewardCentral/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rewardCentral/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rewardCentral/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rewardCentral/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rewardCentral/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rewardCentral/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rewardCentral/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rewardCentral/build/classes/java/main/RewardCentral/Application.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rewardCentral/build/libs/rewardCentral-1.0.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rewardCentral/build/resources/main/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rewardCentral/build/tmp/compileJava/source-classes-mapping.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rewardCentral/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rewardCentral/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rewardCentral/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rewardCentral/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rewardCentral/libs/RewardCentral.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rewardCentral/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rewardCentral/src/main/java/rewardCentral/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rewardCentral/src/main/java/rewardCentral/RewardCentral.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rewardCentral/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/../Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libs/gpsUtil.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../libs/gpsUtil.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/tourGuide/service/TourGuideService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/java/tourGuide/service/TourGuideService.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="GpsUtil" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="GpsUtil" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="GpsUtil" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="application" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="GpsUtil" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="GpsUtil" type="f1a62948:ProjectNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="21bmKT7Bib0ppb7Gg9rIJmYXDoC" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="flattenModules" value="true" />
+    <option name="showMembers" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.17" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.importing" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\WORKSPACE\oc-projet8\JavaPathENProject8\TourGuide\GpsUtil\src\main\resources" />
+      <recent name="C:\WORKSPACE\oc-projet8\JavaPathENProject8\TourGuide\GpsUtil\src\main\java\gpsUtil" />
+      <recent name="C:\WORKSPACE\oc-projet8\JavaPathENProject8\TourGuide\GpsUtil\src\main\java\META-INF" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\WORKSPACE\oc-projet8\JavaPathENProject8\TourGuide\GpsUtil\src\main\resources" />
+      <recent name="C:\WORKSPACE\oc-projet8\JavaPathENProject8\TourGuide\GpsUtil\src\main\resources\META-INF" />
+      <recent name="C:\WORKSPACE\oc-projet8\JavaPathENProject8\TourGuide\GpsUtil" />
+      <recent name="C:\WORKSPACE\oc-projet8\JavaPathENProject8\TourGuide\GpsUtil\src\main\java" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Gradle.GpsUtil [bootRun]">
+    <configuration name="GpsUtil [bootJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="bootJar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="GpsUtil [bootRun]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="bootRun" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="GpsUtil [buildNeeded]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="buildNeeded" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="GpsUtil [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="GpsUtil [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="jar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="Application (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="GpsUtil.main~1" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="gpsUtil.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application (2)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="gpsUtil.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="gpsUtil.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application (3)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="gpsUtil.main~1" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="gpsUtil.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="GpsUtil.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="gpsUtil.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.GpsUtil [bootRun]" />
+        <item itemvalue="Gradle.GpsUtil [jar]" />
+        <item itemvalue="Gradle.GpsUtil [build]" />
+        <item itemvalue="Gradle.GpsUtil [buildNeeded]" />
+        <item itemvalue="Gradle.GpsUtil [bootJar]" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ef02b06d-992f-4a38-931a-dfe6f92065a6" name="Default Changelist" comment="" />
+      <created>1638218098550</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1638218098550</updated>
+      <workItem from="1638218100639" duration="10912000" />
+      <workItem from="1638393431639" duration="374000" />
+      <workItem from="1638394099578" duration="303000" />
+      <workItem from="1638394433367" duration="2911000" />
+      <workItem from="1638454235265" duration="2308000" />
+      <workItem from="1638458139287" duration="913000" />
+      <workItem from="1638460594928" duration="5411000" />
+      <workItem from="1638478991049" duration="862000" />
+      <workItem from="1638479876117" duration="6160000" />
+      <workItem from="1638700755258" duration="2734000" />
+      <workItem from="1638906116026" duration="53000" />
+      <workItem from="1638906182057" duration="357000" />
+      <workItem from="1638906557275" duration="239000" />
+      <workItem from="1638906805751" duration="666000" />
+      <workItem from="1638907506308" duration="625000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

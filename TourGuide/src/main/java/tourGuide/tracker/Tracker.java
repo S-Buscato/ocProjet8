@@ -10,7 +10,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import tourGuide.service.TourGuideService;
-import tourGuide.user.User;
+import tourGuide.domain.user.User;
 
 public class Tracker implements Runnable {
 	private Logger logger = LoggerFactory.getLogger(Tracker.class);

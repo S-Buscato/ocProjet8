@@ -1,5 +1,6 @@
 package tourGuide.service;
 
+
 import java.time.LocalDateTime;
 import java.time.ZoneOffset;
 import java.util.ArrayList;
@@ -20,15 +21,28 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import gpsUtil.GpsUtil;
-import gpsUtil.location.Attraction;
 import gpsUtil.location.Location;
+import gpsUtil.location.Attraction;
 import gpsUtil.location.VisitedLocation;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Service;
+import tourGuide.domain.location.AttractionLocation;
+import tourGuide.domain.user.*;
+import tourGuide.domain.user.User;
 import tourGuide.helper.InternalTestHelper;
 import tourGuide.tracker.Tracker;
-import tourGuide.user.User;
-import tourGuide.user.UserReward;
 import tripPricer.Provider;
 import tripPricer.TripPricer;
+
+import java.time.LocalDateTime;
+import java.time.ZoneOffset;
+import java.util.*;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 @Service
 public class TourGuideService {
@@ -80,7 +94,7 @@ public class TourGuideService {
 	
 	public List<Provider> getTripDeals(User user) {
 		int cumulatativeRewardPoints = user.getUserRewards().stream().mapToInt(i -> i.getRewardPoints()).sum();
-		List<Provider> providers = tripPricer.getPrice(tripPricerApiKey, user.getUserId(), user.getUserPreferences().getNumberOfAdults(), 
+		List<Provider> providers = 	tripPricer.getPrice(tripPricerApiKey, user.getUserId(), user.getUserPreferences().getNumberOfAdults(),
 				user.getUserPreferences().getNumberOfChildren(), user.getUserPreferences().getTripDuration(), cumulatativeRewardPoints);
 		user.setTripDeals(providers);
 		return providers;
@@ -95,12 +109,31 @@ public class TourGuideService {
 
 	public List<Attraction> getNearByAttractions(VisitedLocation visitedLocation) {
 		List<Attraction> nearbyAttractions = new ArrayList<>();
+		List<AttractionLocation> attractionLocations = new ArrayList<>();
+
+		//get all attractions and calcul each distance from user
 		for(Attraction attraction : gpsUtil.getAttractions()) {
-			if(rewardsService.isWithinAttractionProximity(attraction, visitedLocation.location)) {
-				nearbyAttractions.add(attraction);
-			}
+			AttractionLocation attractionLocation = new AttractionLocation();
+			attractionLocation.setAttraction(attraction);
+			Location locationAttraction = new Location(attraction.longitude, attraction.latitude);
+			attractionLocation.setDistance(rewardsService.getDistance(locationAttraction,visitedLocation.location));
+			attractionLocations.add(attractionLocation);
 		}
-		
+		//sort each attraction by distance
+		//avec implements comparator dans la classe
+		Collections.sort(attractionLocations);
+
+		//autre façon sans implements comparator dans la classe
+		/*Comparator<AttractionLocation> attractionLocationComparator = Comparator.comparing(AttractionLocation::getDistance);
+		Collections.sort(attractionLocations, attractionLocationComparator);*/
+
+		//peut on faire mieux/plus direct ?
+		//get the 5 first attractions
+		List<AttractionLocation> fiveAttraction = attractionLocations.stream().limit(5).collect(Collectors.toList());
+		for(AttractionLocation attractionLocation1 : fiveAttraction){
+			nearbyAttractions.add(attractionLocation1.getAttraction());
+			System.out.println(attractionLocation1.getAttraction().attractionName + " --- " + attractionLocation1.getDistance());
+		}
 		return nearbyAttractions;
 	}
 	
@@ -110,6 +143,17 @@ public class TourGuideService {
 		        tracker.stopTracking();
 		      } 
 		    }); 
+	}
+
+	public List<UserLocation> getAllUsersLocation() {
+		List<User> userList = getAllUsers();
+		List<UserLocation> userLocationList = new ArrayList<>();
+
+		userList.forEach(u -> {
+			userLocationList.add(new UserLocation(u.getLastVisitedLocation().location, u.getUserId().toString()));
+		});
+
+		return userLocationList;
 	}
 
 	public void executorService(List<User> users){
