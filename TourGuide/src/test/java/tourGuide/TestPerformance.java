@@ -1,6 +1,6 @@
 package tourGuide;
 
-import gpsUtil.GpsUtil;
+import gpsUtil.service.GpsUtil;
 import gpsUtil.location.Attraction;
 import gpsUtil.location.VisitedLocation;
 import org.apache.commons.lang3.time.StopWatch;

@@ -1,18 +1,13 @@
 package tourGuide.service;
 
-import gpsUtil.GpsUtil;
 import gpsUtil.location.Attraction;
 import gpsUtil.location.Location;
 import gpsUtil.location.VisitedLocation;
+import gpsUtil.service.GpsUtil;
 import org.springframework.stereotype.Service;
 import rewardCentral.RewardCentral;
 import tourGuide.domain.user.User;
 import tourGuide.domain.user.UserReward;
-
-import java.util.List;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.TimeUnit;
 
 import java.util.List;
 import java.util.concurrent.ExecutorService;
