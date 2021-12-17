@@ -1,7 +1,7 @@
 package tourGuide.service;
 
 
-import gpsUtil.GpsUtil;
+import gpsUtil.service.GpsUtil;
 import gpsUtil.location.Attraction;
 import gpsUtil.location.Location;
 import gpsUtil.location.VisitedLocation;

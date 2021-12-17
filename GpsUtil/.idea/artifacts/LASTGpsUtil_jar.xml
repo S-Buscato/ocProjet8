@@ -1,0 +1,45 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="LASTGpsUtil:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/LASTGpsUtil_jar</output-path>
+    <root id="archive" name="GpsUtil.jar">
+      <element id="directory" name="com">
+        <element id="dir-copy" path="$PROJECT_DIR$/com" />
+      </element>
+      <element id="directory" name="gpsUtil">
+        <element id="directory" name="controller">
+          <element id="dir-copy" path="$PROJECT_DIR$/src/main/java/gpsUtil/controller" />
+          <element id="file-copy" path="$PROJECT_DIR$/src/main/java/gpsUtil/controller/GpsController.java" />
+        </element>
+        <element id="directory" name="service">
+          <element id="dir-copy" path="$PROJECT_DIR$/src/main/java/gpsUtil/service" />
+          <element id="file-copy" path="$PROJECT_DIR$/src/main/java/gpsUtil/service/GpsUtil.java" />
+        </element>
+        <element id="directory" name="location">
+          <element id="archive" name="Attraction.java">
+            <element id="file-copy" path="$PROJECT_DIR$/src/main/java/gpsUtil/location/Attraction.java" />
+          </element>
+          <element id="archive" name="VisitedLocation.java">
+            <element id="file-copy" path="$PROJECT_DIR$/src/main/java/gpsUtil/location/VisitedLocation.java" />
+          </element>
+          <element id="archive" name="location.java">
+            <element id="file-copy" path="$PROJECT_DIR$/src/main/java/gpsUtil/location/Location.java" />
+          </element>
+          <element id="dir-copy" path="$PROJECT_DIR$/src/main/java/gpsUtil/location" />
+        </element>
+        <element id="javaee-facet-classes" facet="GpsUtil.main/web/Web" />
+        <element id="dir-copy" path="$PROJECT_DIR$/src/main/java/gpsUtil/location" />
+      </element>
+      <element id="directory" name="javax">
+        <element id="dir-copy" path="$PROJECT_DIR$/javax" />
+      </element>
+      <element id="directory" name="org">
+        <element id="dir-copy" path="$PROJECT_DIR$/org" />
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="dir-copy" path="$PROJECT_DIR$/META-INF" />
+      </element>
+      <element id="module-source" name="GpsUtil.main" />
+      <element id="dir-copy" path="$PROJECT_DIR$/src" />
+    </root>
+  </artifact>
+</component>

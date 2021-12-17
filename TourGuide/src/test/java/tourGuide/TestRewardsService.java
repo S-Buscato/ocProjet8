@@ -1,9 +1,9 @@
 package tourGuide;
 
-import gpsUtil.GpsUtil;
+import gpsUtil.service.GpsUtil;
 import gpsUtil.location.Attraction;
 import gpsUtil.location.VisitedLocation;
-import org.junit.Ignore;
+import org.junit.Before;
 import org.junit.Test;
 import rewardCentral.RewardCentral;
 import tourGuide.domain.user.User;
@@ -14,12 +14,17 @@ import tourGuide.service.TourGuideService;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 import java.util.UUID;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 public class TestRewardsService {
+	@Before
+	public void init() {
+		Locale.setDefault(new Locale("en", "EN"));
+	}
 
 	@Test
 	public void userGetRewards() {
@@ -46,7 +51,7 @@ public class TestRewardsService {
 		assertTrue(rewardsService.isWithinAttractionProximity(attraction, attraction));
 	}
 	
-	@Ignore // Needs fixed - can throw ConcurrentModificationException
+	//@Ignore // Needs fixed - can throw ConcurrentModificationException
 	@Test
 	public void nearAllAttractions() {
 		GpsUtil gpsUtil = new GpsUtil();
