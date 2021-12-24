@@ -13,12 +13,4 @@ import lombok.NoArgsConstructor;
 public class UserLocation {
     private Location location;
     private String userId;
-/*
-    public UserLocation(location location, String userId) {
-        this.location = location;
-        this.userId = userId;
-    }
-
-    public UserLocation(gpsUtil.location.location location, String userId) {
-    }*/
 }
