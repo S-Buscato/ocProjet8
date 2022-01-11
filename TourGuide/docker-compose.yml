@@ -1,6 +1,7 @@
 services:
   tourguide:
     image: tourguide:v1.0.0
+    container_name: TourGuide
     ports:
       - 8080:8080
     depends_on:
@@ -9,16 +10,19 @@ services:
        - trippricer
 
   gpsutil:
+    container_name: GPS_UTIL
     image: gps-util:v1.0.0
     ports:
       - 8081:8081
 
   rewardscentral:
+    container_name: RewardCentral
     image: reward-central:v1.0.0
     ports:
       - 8082:8082
 
   trippricer:
+    container_name: TripPricer
     image: trip-pricer:v1.0.0
     ports:
       - 8083:8083
